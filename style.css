@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: black;
+    --bg-color: #dfe4ee;
+    --box-shadow-color: -6px -6px 14px #ffffff73, 6px 6px 10px rgba(93, 104, 121, .688) 
+}
+
+/*.light{
+    --switch-bt-dark: url(./assets/moon.svg);
+    --text-color: white;
+    --bg-color: #424242;
+    --box-shadow-color: -3px -3px 7px #1e1e1e, 3px 3px 5px rgba(66, 66, 66, .388);
+}*/
+
+body{
+    /*background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;*/
+    background: var(--bg-color);
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+/*display, justify e alingn: centralizar todo o conteúdo*/
+#container{
+    width: 100%;
+    max-width: 580px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+}
+
+
+.neumorphism{
+    height: 800px;
+    max-width: 580px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-color);   
+}
+
+/* PROFILE */
+#profile{
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    width: 112px;
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/* LINKS */
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+    border-radius: 10px;
+    background: #dde0e6;
+    box-shadow:  var(--box-shadow-color);
+   
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: all 0.2s;
+} 
+
+ul li a:hover{
+    background: rgba(189, 192, 201, 0.2);
+    border: 1.5px solid --text-color;
+}
+
+/* SWITCH */
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto; /*centralizar o switch*/
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bt-dark) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    animation: slide-back .2s forwards;
+}
+
+.light #switch button{
+    animation: slide-in .2 forwards;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--box-shadow-color);
+}
+
+footer{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ANIMAÇÕES */
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50;
+    }
+}
+
+@keyframes slide-back {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
+}

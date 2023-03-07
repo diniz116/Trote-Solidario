@@ -6,8 +6,8 @@
 
 :root{
     --text-color: black;
-    --bg-color: #dfe4ee;
-    --box-shadow-color: -6px -6px 14px #ffffff73, 6px 6px 10px rgba(93, 104, 121, .688) 
+    --bg-color: #e7ebf3;
+    --box-shadow-color: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(93, 104, 121, .888) 
 }
 
 /*.light{
@@ -55,7 +55,7 @@ body *{
 }
 
 #profile img{
-    width: 112px;
+    width: 150px;
 }
 
 #profile p{
@@ -80,7 +80,7 @@ ul li a{
     padding: 16px 24px;
 
     border-radius: 10px;
-    background: #dde0e6;
+    background: #e3e6ee;
     box-shadow:  var(--box-shadow-color);
    
     backdrop-filter: blur(4px);
@@ -93,10 +93,31 @@ ul li a{
 } 
 
 ul li a:hover{
-    background: rgba(189, 192, 201, 0.2);
-    border: 1.5px solid --text-color;
+    background: rgba(153, 150, 150, 0.2);   
 }
 
+
+/* SOCIAL LINKS */
+#social-links{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+#social-links a:hover{
+    background: rgba(175, 171, 171, 0.3);
+}
 /* SWITCH */
 #switch{
     position: relative;

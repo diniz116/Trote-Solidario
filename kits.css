@@ -29,15 +29,15 @@ body *{
 /*display, justify e alingn: centralizar todo o conteúdo*/
 #container{
     width: 100%;
-    max-width: 700px;
+    max-width: 580px;
     margin: 56px auto 0;
     padding: 0 24px;
 }
 
 
 .neumorphism{
-    height: 900px;
-    max-width: 700px;
+    height: 800px;
+    max-width: 580px;
     margin: 56px auto 0;
     padding: 0 24px;
     background: var(--bg-color);
@@ -52,8 +52,8 @@ body *{
     --text-color:white;
     --switch-bg-url: url(./assets/moon.svg);
     
-    height: 900px;
-    max-width: 700px;
+    height: 800px;
+    max-width: 580px;
     margin: 56px auto 0;
     padding: 0 24px;
     border-radius: 10px;
@@ -197,8 +197,52 @@ footer{
     }
 }
 
-p{
-    font-size: medium;
-    font-style: inherit;
-    margin: 10px;
-}
+#calc {
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    border-radius: 5px;
+    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    padding: 15px;
+    margin: 30px 35%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 154px;
+    height: 49px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+#calc::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  
+ #calc:hover::before {
+    width: 100%;
+  }
+
+
+#princ {
+    text-align: center;
+    font-weight: bold;
+    margin: 10% auto 0;
+    max-width: 200px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.3);
+    outline: none;
+    color: var(--text-color);
+  }

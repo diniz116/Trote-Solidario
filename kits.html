@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trote Solidário</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kits.css">
 </head>
 <body>
     <div id="container">
@@ -20,23 +20,12 @@
             <button></button>
             <span></span>
         </div>
-        <ul>
-            <li>
-                <a href="equipes.html">🎯 EQUIPES</a>
-            </li>
-            <li>
-                <a href="entidades.html">📰 ENTIDADES</a>
-            </li>
-            <li>
-                <a href="gincana.html">📈 GINCANA</a>
-            </li>
-            <li>
-                <a href="integracao.html">📚 INTEGRAÇÃO</a>
-            </li>
-            <li>
-                <a href="kits.html">📊 CALCULADORA</a>
-            </li>
-        </ul>
+        <div id="princ">
+            Número de kits <input type="number" id="kits"/>
+        </div>
+        <div>
+            <button onclick="Kits()" id="calc">CALCULAR</button>
+        </div>
         <div id="social-links">
             <a href="https://github.com/diniz116" target="_blank">
                 <ion-icon name="logo-github"></ion-icon>
@@ -53,6 +42,6 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="./script.js"></script>
+    <script src="./kits.js"></script>
 </body>
 </html>

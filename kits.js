@@ -25,6 +25,12 @@ function toggleMode(){
 
 function Kits(){
     let num = Number(document.getElementById("kits").value);
+    let arroz = Number(document.getElementById("arroz").value);
+    let feijao = Number(document.getElementById("feijao").value);
+    let mac = Number(document.getElementById("mac").value);
+    let oleo = Number(document.getElementById("oleo").value);
+    let nutren = Number(document.getElementById("nutren").value);
+
     let pontos;
 
     if(num < 0)
@@ -39,6 +45,21 @@ function Kits(){
         pontos = 4000;
     else if(num >= 80)
         pontos = 5000;
+
+    if(arroz > 0)
+        pontos += (arroz * 10);
+
+    if(feijao > 0)
+        pontos += (feijao * 2);
+
+    if(mac > 0)
+        pontos += (mac * 0.5);
+
+    if(oleo > 0)
+        pontos += (oleo * 1);
+
+    if(nutren > 0)
+        pontos += (nutren * 25);
 
     if (pontos == -1)
         alert("Impossível Calcular");

@@ -198,7 +198,17 @@ footer{
 }
 
 #pric{
+    margin-top: 20px;
     padding: 20px;
     text-align: center;
     font-weight: bold;
+}
+
+#text{
+    justify-content: center;
+    text-align: center;
+    font-size: medium;
+    font-style: inherit;
+    font-weight: 500;
+    margin-top: 25px;
 }
